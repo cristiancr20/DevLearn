@@ -1,0 +1,26 @@
+import React from 'react';
+import * as FaIcons from 'react-icons/fa';
+import * as RiIcons from 'react-icons/ri'
+import * as HiIcons from 'react-icons/hi'
+
+
+export const SidebarData = [
+  {
+    title: 'Inicio',
+    path: '/inicio',
+    icon: <HiIcons.HiHome />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Cursos',
+    path: '/cursos',
+    icon: <FaIcons.FaReadme/>,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Equipo',
+    path: '/equipo',
+    icon: <RiIcons.RiTeamFill />,
+    cName: 'nav-text'
+  },
+];

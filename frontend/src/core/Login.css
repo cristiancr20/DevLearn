@@ -1,0 +1,87 @@
+
+
+:root{
+  --color-uno:#060b26;
+  --color-dos: crimson;
+  --tipo-letra-uno:'Nunito', sans-serif;
+  --tipo-letra-dos: 'Anek Malayalam', sans-serif;
+  --tipo-letra-tres:'Rubik Moonrocks', cursive;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.log{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin:20px  auto;
+}
+
+.img{
+  width: 80%;
+  padding: 20px ;
+}
+
+.img  img{
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+  margin: 50px;
+  font-family: var(--tipo-letra-uno);
+}
+
+.sign-box{
+  font-family:var(--tipo-letra-dos);
+  
+  width: 70%;
+  margin: auto;
+  padding: 40px;
+  
+  background: var(--color-uno);
+  border-radius: 10px;
+}
+
+label, input{
+  width: 100%;
+  margin: 5px auto;
+  color: #fff;
+}
+
+input{
+  border: none;
+  padding: 5px;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+}
+
+.boton{
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.boton button{
+  width: 30%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+  font-family: var(--tipo-letra-tres);
+}
+
+button:hover{
+  width: 40%;
+}

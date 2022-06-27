@@ -1,0 +1,57 @@
+:root{
+  --color-uno:#060b26
+  --color-dos: crimson;
+  --tipo-letra-uno:'Nunito', sans-serif;
+  --tipo-letra-dos: 'Anek Malayalam', sans-serif;
+  --tipo-letra-tres:'Rubik Moonrocks', cursive;
+
+}
+
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.home{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  background: var(--color-uno);
+  height: 100vh;
+}
+
+.home .home_description{
+  width: 90%;
+  margin: auto;
+  color: #fff;
+}
+
+.home_description .title{
+  font-family: var(--tipo-letra-tres);
+  font-size: 70px;
+  color:var(--color-dos) ;
+}
+
+.home_description p{
+  font-family: var(--tipo-letra-dos);
+  font-size: 20px;
+}
+
+.home_description .botones {
+  display: block;
+  margin: 20px;
+  list-style: none;
+}
+
+.home_description .botones .boton{
+  text-decoration: none;
+}
+
+
+
+.img{
+  width: 90%;
+  margin: auto;
+}

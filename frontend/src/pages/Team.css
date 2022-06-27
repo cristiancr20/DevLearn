@@ -1,0 +1,97 @@
+:root{
+  --color-uno:#060b26;
+  --color-dos: crimson;
+  
+  --tipo-letra-uno:'Nunito', sans-serif;
+  --tipo-letra-dos: 'Anek Malayalam', sans-serif;
+  --tipo-letra-tres:'Rubik Moonrocks', cursive;
+
+}
+
+/* 
+.slides{
+  width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 0 20px 0px var(--color-uno);
+    border-radius: 10px;
+    background: var(--color-uno);
+    
+    font-family: var(--tipo-letra-dos);
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+}
+
+.slides-cont{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+.slides img{
+  width: 250px;
+  height: 300px;
+}
+ */
+
+ .slides{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  background: var(--color-uno);
+  margin: 20px ;
+  border-radius: 10px;
+  font-family: var(--tipo-letra-uno);
+  font-weight: bold;
+}
+
+.slides > slides-cont{
+  scroll-snap-align: start;
+  
+}
+
+.slides .slides-cont{
+  margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 20px;
+margin-right: 20px;
+text-align: center;
+background: #ffffff;
+padding: 10px;
+border-radius: 10px;
+}
+
+.slides .slides-cont img{
+  width: 240px;
+  height: 250px;
+  object-fit: contain;
+  
+}
+
+.slides::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+@media screen and (max-width: 960px){
+ .slides{
+  width: 70%;
+  margin:20px  auto;
+  
+ }
+
+  
+
+}

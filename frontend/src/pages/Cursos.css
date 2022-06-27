@@ -1,0 +1,53 @@
+:root{
+  --color-uno:#060b26;
+  --color-dos: crimson;
+  
+  --tipo-letra-uno:'Nunito', sans-serif;
+  --tipo-letra-dos: 'Anek Malayalam', sans-serif;
+  --tipo-letra-tres:'Rubik Moonrocks', cursive;
+
+}
+
+
+
+
+.cursos .cursos-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+  margin:20px auto;
+}
+.card{
+  width: 70%;
+  margin: auto;
+  box-shadow: 0 0 20px 0px var(--color-uno);
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--color-uno);
+  font-family: var(--tipo-letra-dos);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.card:hover{
+  transform: scale(1.2);
+  background: var(--color-uno);
+  color: #fff;
+}
+
+.card h2{
+  font-family: var(--tipo-letra-uno);
+  text-align: center;
+  margin: 5px;
+  font-weight: bold;
+  color: var(--color-dos);
+}
+
+.card p{
+  text-align: center;
+}
+
+.card img{
+  text-align: center;
+}
