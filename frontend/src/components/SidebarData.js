@@ -2,6 +2,7 @@ import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as RiIcons from 'react-icons/ri'
 import * as HiIcons from 'react-icons/hi'
+import * as BiIcons from 'react-icons/bi'
 
 
 export const SidebarData = [
@@ -21,6 +22,12 @@ export const SidebarData = [
     title: 'Equipo',
     path: '/equipo',
     icon: <RiIcons.RiTeamFill />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Salir',
+    path: '/',
+    icon: <BiIcons.BiLogOut />,
     cName: 'nav-text'
   },
 ];

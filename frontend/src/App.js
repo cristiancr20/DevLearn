@@ -8,9 +8,11 @@ import Team from './pages/Team';
 import Cursos from './pages/Cursos';
 import Inicio from './pages/Inicio';
 
+import Html from './pages/html';
+
 function App() {
   return (
-    <>
+    
       <Router>
         <Routes>
           {/* Rutas de la carpeta core */}
@@ -22,9 +24,12 @@ function App() {
           <Route path = "/inicio" element={<Inicio/>}></Route>
           <Route path = "/cursos" element={<Cursos/>}></Route>
           <Route path='/equipo' element={<Team/>}></Route>
+          <Route path ='/cursos/Html' element={<Html/>}></Route>   
+
+          <Route path='*' element="Error 404"></Route>  
         </Routes>
       </Router>
-    </>
+    
   );
 }
 

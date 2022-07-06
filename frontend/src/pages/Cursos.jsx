@@ -4,6 +4,8 @@ import axios from 'axios'
 /* import { BsCardImage, BsFillPencilFill, BsFillTrashFill, BsArrowCounterclockwise, BsSearch } from "react-icons/bs"; */
 import Navbar from '../components/Navbar';
 import './Cursos.css'
+import {Link} from 'react-router-dom'
+
 export default class Cursos extends React.Component {
 
   state = {
@@ -28,7 +30,7 @@ export default class Cursos extends React.Component {
       <>
         <Navbar></Navbar>
         <div className="cursos">
-          
+
           {/*  <div style={{
             width: "100%",
             margin: "auto",
@@ -89,12 +91,13 @@ export default class Cursos extends React.Component {
           <div className="cursos-container">
             {this.state.productos.map(datos => {
               return (
-                <div className='card' key={datos}>
-                  <h2>{datos.name}</h2>
-                  <p>{datos.description}</p>
-                  <img src={datos.photo} alt="Imagen" ></img>
+                <div key={datos} className="card">
+                  <Link to={datos.name}  className="url">
+                    <h2>{datos.name}</h2>
+                    <p>{datos.description}</p>
 
-
+                    <img src={datos.photo} alt="Imagen" ></img>
+                  </Link>
                 </div>
               )
             })}

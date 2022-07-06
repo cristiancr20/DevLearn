@@ -1,5 +1,5 @@
 :root{
-  --color-uno:#060b26
+  --color-uno:#060b26;
   --color-dos: crimson;
   --tipo-letra-uno:'Nunito', sans-serif;
   --tipo-letra-dos: 'Anek Malayalam', sans-serif;
@@ -47,9 +47,12 @@
 
 .home_description .botones .boton{
   text-decoration: none;
+  width: 50%;
 }
 
-
+.home_description .botones .boton button{
+  width: 100%;
+}
 
 .img{
   width: 90%;

@@ -13,10 +13,10 @@ function Home() {
             <p>El conocimiento es poder, así que conocenos.</p>
             <div className="botones">
               <Link to='/signin' className='boton'>
-                <button>Log In</button>
+                <button>Iniciar Sesion</button>
               </Link>
               <Link to='/signup' className='boton'>
-                <button>Sign In</button>
+                <button>Registrarse</button>
               </Link>
             </div>
         </div>

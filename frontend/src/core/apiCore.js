@@ -1,34 +1,36 @@
 import { API } from '../config';
 
-export const getProducts = () => {
-  return fetch(
-    `${API}/product/products`,
-    {
-      method: 'GET'
-    }
-  )
-    .then(response =>{ 
-      console.log(response)
-      return response.json()
-    })
-    .catch(err => console.log(err))
+export const getProducts = async () => {
+  try {
+    const response = await fetch(
+      `${API}/product/products`,
+      {
+        method: 'GET'
+      }
+    );
+    console.log(response);
+    return await response.json();
+  } catch (err) {
+    return console.log(err);
+  }
 }
 
 
 
-export const getUser = () =>{
-  return fetch(
-    `${API}/auth/list`,
-    {
-      method: 'GET'
-    }
-  )
-    .then(response =>{ 
-     const datos = response
-     console.log(datos)
-      return response.json()
-    })
-    .catch(err => console.log(err))
+export const getUser = async () =>{
+  try {
+    const response = await fetch(
+      `${API}/auth/list`,
+      {
+        method: 'GET'
+      }
+    );
+    const datos = response;
+    console.log(datos);
+    return await response.json();
+  } catch (err) {
+    return console.log(err);
+  }
 }
 
 
@@ -41,38 +43,36 @@ export const read = (videogameId) => {
     .catch(err => console.log(err))
 }
 
-export const signin = user => {
-  return fetch(`${API}/auth/signin`, {
-    method: "POST",
-    headers: {
-      Accept: 'application/json',
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(user) // user: 
-  })
-    .then(response => {
-      return response.json();
-    })
-    .catch(err => {
-      console.log(err);
-    })
+export const signin = async user => {
+  try {
+    const response = await fetch('http://localhost:8000/service/auth/signin', {
+      method: "POST",
+      headers: {
+        Accept: 'application/json',
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(user) // user: 
+    });
+    return await response.json();
+  } catch (err) {
+    console.log(err);
+  }
 };
 
-export const signup = user => {
-  return fetch(`${API}/auth/signup`, { 
-    method: "POST",
-    headers: {
-      Accept: 'application/json',
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(user)
-  })
-    .then(response => {
-      return response.json();
-    })
-    .catch(err => {
-      console.log(err);
-    })
+export const signup = async user => {
+  try {
+    const response = await fetch('http://localhost:8000/service/auth/signup', {
+      method: "POST",
+      headers: {
+        Accept: 'application/json',
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(user)
+    });
+    return await response.json();
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const authenticate = (data, next) => {

@@ -73,7 +73,7 @@ const Signup = () => {
         </div>
         <div className="boton">
           <button onClick={clickSubmit} className='btn btn-primary'>
-            Sign Up
+            Registrarse
           </button>
         </div>
       </form>
@@ -88,7 +88,7 @@ const Signup = () => {
 
   const showSuccess = () => (
     <div className='alert alert-info' style={{ display: success ? '' : 'none' }}>  New Account Successfully Created You can now
-      <Link to='/signin'>Sign in</Link>
+      <Link to='/signin'>Iniciar Sesion</Link>
     </div>
   )
 
@@ -96,7 +96,7 @@ const Signup = () => {
     <>
 
       <div className="mt-5">
-        <h1 className="text-center mb-5">Signup form</h1>
+        <h1 className="text-center mb-5">Registrarse</h1>
         {showError()}
         {showSuccess()}
         {signUpForm()}

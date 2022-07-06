@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import './Login.css'
 
 import { signin, authenticate, isAuthenticated } from './apiCore';
-import { Link } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 import img_sesion from '../image/sigin.svg';
 
+
+
 const Signin = () => {
+    
 
     const [values, setValues] = useState({
         email: '',
@@ -81,13 +84,13 @@ const Signin = () => {
     const redirectUser = () => {
         if (redirectToReferrer) {
             if (user && user.role === 1) {
-                return <Link to="/inicio" />
+                return <NavLink to="/" />
             } else {
-                return <Link to="/" />
+                return <NavLink to="/inicio" />
             }
         }
         if (isAuthenticated()) {
-            return <Link to="/" />
+            return <NavLink to="/inicio" />
         }
     }
 
